@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+packages/
+publish/
+*.user
+*.suo
+*.mdf
+*.ldf
+.DS_Store

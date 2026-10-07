@@ -1,0 +1,334 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D812785-10AA-400C-AF24-B1623F5CA72D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>college_management_system</RootNamespace>
+    <AssemblyName>college management system</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44387</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\college_management.mdf" />
+    <Content Include="App_Data\college_management_log.ldf">
+      <DependentUpon>college_management.mdf</DependentUpon>
+    </Content>
+    
+    <Content Include="bin\bin\college management system.pdb" />
+    <Content Include="bin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\bin\roslyn\csc.exe" />
+    <Content Include="bin\bin\roslyn\csi.exe" />
+    <Content Include="bin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\bin\roslyn\System.Console.dll" />
+    <Content Include="bin\bin\roslyn\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\bin\roslyn\System.Globalization.Calendars.dll" />
+    <Content Include="bin\bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\bin\roslyn\System.IO.Compression.ZipFile.dll" />
+    <Content Include="bin\bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\bin\roslyn\System.Net.Http.dll" />
+    <Content Include="bin\bin\roslyn\System.Net.Sockets.dll" />
+    <Content Include="bin\bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\bin\roslyn\vbc.exe" />
+    <Content Include="bin\bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\bin\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\bin\System.Web.Http.dll" />
+    <Content Include="bin\bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\bin\System.Web.Http.xml" />
+    <Content Include="obj\Debug\college management system.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\college management system.dll" />
+    <Content Include="obj\Debug\college management system.pdb" />
+    <Content Include="student\css\animate.min.css" />
+    <Content Include="student\css\bootstrap.css" />
+    <Content Include="student\css\font-awesome.css" />
+    <Content Include="student\css\ken-burns.css" />
+    <Content Include="student\css\smoothbox.css" />
+    <Content Include="student\css\style.css" />
+    <Content Include="student\fonts\fontawesome-webfont.svg" />
+    <Content Include="student\Home.aspx" />
+    <Content Include="student\About.aspx" />
+    <Content Include="student\Gallery.aspx">
+      <BrowseToURL>~/student/Gallary.aspx</BrowseToURL>
+    </Content>
+    <Content Include="student\images\1.jpg" />
+    <Content Include="student\images\3.jpg" />
+    <Content Include="student\images\7.jpg" />
+    <Content Include="student\images\9.jpg" />
+    <Content Include="student\images\a4.jpg" />
+    <Content Include="student\images\a6.jpg" />
+    <Content Include="student\images\ba.jpg" />
+    <Content Include="student\images\ba1.jpg" />
+    <Content Include="student\images\banner.jpg" />
+    <Content Include="student\images\banner1.jpg" />
+    <Content Include="student\images\banner2.jpg" />
+    <Content Include="student\images\banner22.jpg" />
+    <Content Include="student\images\bbanner.jpg" />
+    <Content Include="student\images\c1.jpg" />
+    <Content Include="student\images\c2.jpg" />
+    <Content Include="student\images\c3.jpg" />
+    <Content Include="student\images\c4.jpg" />
+    <Content Include="student\images\img-sprite.png" />
+    <Content Include="student\images\quote.png" />
+    <Content Include="student\images\t1.jpg" />
+    <Content Include="student\images\t2.jpg" />
+    <Content Include="student\images\t3.jpg" />
+    <Content Include="student\images\t4.jpg" />
+    <Content Include="student\images\w1.jpg" />
+    <Content Include="student\images\w2.jpg" />
+    <Content Include="student\images\w3.jpg" />
+    <Content Include="student\images\w4.jpg" />
+    <Content Include="student\images\w5.jpg" />
+    <Content Include="student\images\w6.jpg" />
+    <Content Include="student\images\w7.jpg" />
+    <Content Include="student\js\bootstrap.min.js" />
+    <Content Include="student\js\custom.js" />
+    <Content Include="student\js\easing.js" />
+    <Content Include="student\js\jquery.min.js" />
+    <Content Include="student\js\jquery.zbox.min.js" />
+    <Content Include="student\js\move-top.js" />
+    <Content Include="student\js\numscroller-1.0.js" />
+    <Content Include="student\js\responsiveslides.min.js" />
+    <Content Include="student\js\smoothbox.jquery2.js" />
+    <Content Include="student\faculty.aspx" />
+    <Content Include="student\course.aspx" />
+    <Content Include="student\registration.aspx" />
+    <Content Include="student\Loginpage.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="student\student_master.Master.cs">
+      <DependentUpon>student_master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\student_master.Master.designer.cs">
+      <DependentUpon>student_master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="student\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\faculty.aspx.cs">
+      <DependentUpon>faculty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\faculty.aspx.designer.cs">
+      <DependentUpon>faculty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\course.aspx.cs">
+      <DependentUpon>course.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\course.aspx.designer.cs">
+      <DependentUpon>course.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\Loginpage.aspx.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\Loginpage.aspx.designer.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\college .53559EA2.Up2Date" />
+    <Content Include="obj\Debug\college management system.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\college management system.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="bin\bin\college management system.dll.config" />
+    <Content Include="bin\bin\roslyn\csc.exe.config" />
+    <Content Include="bin\bin\roslyn\csc.rsp" />
+    <Content Include="bin\bin\roslyn\csi.exe.config" />
+    <Content Include="bin\bin\roslyn\csi.rsp" />
+    <Content Include="bin\bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\bin\roslyn\vbc.rsp" />
+    <Content Include="bin\bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="packages.config" />
+    <Content Include="student\student_master.Master" />
+    <Content Include="student\fonts\fontawesome-webfont.eot" />
+    <Content Include="student\fonts\fontawesome-webfont.ttf" />
+    <Content Include="student\fonts\fontawesome-webfont.woff" />
+    <Content Include="student\fonts\FontAwesome.otf" />
+    <Content Include="student\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="student\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Controllers\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45378</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44387/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
